@@ -6,10 +6,9 @@
       - Chooses how the scene is drawn exactly
       - Creates a instance of the GUI class
    - GUI class
-      - Read .txt SUDO HTML code for layout information
-      - Map between tags and parameters
-      - Map each parameter to it's contents
-      - Execute the functions each parameter indicates
+      - Read .txt SUDO HTML for list of tags
+      - Execute functions for given parameters for given tag
+      - Run animations presented as tag parameters
    - Dependency
       - SFML-3.0.0
    - Compiler used : gcc-14.2.0-mingw-w64ucrt-12.0.0-r2
