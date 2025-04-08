@@ -11,5 +11,5 @@
       - Map each parameter to it's contents
       - Execute the functions each parameter indicates
 <picture>
-  <img src="images\screenShot1.jpg" alt="Image of app" style="width:auto;">
+  <img src="images/screenShot1.jpg" alt="Image of app" style="width:auto;">
 </picture>
