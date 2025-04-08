@@ -10,6 +10,10 @@
       - Map between tags and parameters
       - Map each parameter to it's contents
       - Execute the functions each parameter indicates
+   - Dependency
+      - SFML-3.0.0
+   - Compiler used : gcc-14.2.0-mingw-w64ucrt-12.0.0-r2
+
 ## Sudo HTML like code :
 ![ScreenShot2](https://github.com/user-attachments/assets/400dd095-cef5-4be4-9b02-544e7ab74a9e)
 
