@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="alarm" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/alarm" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/alarm" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c17" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c17" />
+			<Add option="-m64" />
+			<Add option="-std=c++17" />
+			<Add directory="../SFML-3.0.0/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-m64" />
+			<Add library="../SFML-3.0.0/lib/libFLAC.a" />
+			<Add library="../SFML-3.0.0/lib/libFLACd.a" />
+			<Add library="../SFML-3.0.0/lib/libfreetype.a" />
+			<Add library="../SFML-3.0.0/lib/libfreetyped.a" />
+			<Add library="../SFML-3.0.0/lib/libogg.a" />
+			<Add library="../SFML-3.0.0/lib/liboggd.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-audio.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-audio-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-audio-s.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-audio-s-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-graphics.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-graphics-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-graphics-s.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-graphics-s-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-main-s.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-main-s-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-network.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-network-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-network-s.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-network-s-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-system.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-system-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-system-s.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-system-s-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-window.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-window-d.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-window-s.a" />
+			<Add library="../SFML-3.0.0/lib/libsfml-window-s-d.a" />
+			<Add library="../SFML-3.0.0/lib/libvorbis.a" />
+			<Add library="../SFML-3.0.0/lib/libvorbisd.a" />
+			<Add library="../SFML-3.0.0/lib/libvorbisenc.a" />
+			<Add library="../SFML-3.0.0/lib/libvorbisencd.a" />
+			<Add library="../SFML-3.0.0/lib/libvorbisfile.a" />
+			<Add library="../SFML-3.0.0/lib/libvorbisfiled.a" />
+			<Add directory="../SFML-3.0.0/bin" />
+		</Linker>
+		<Unit filename="events.h" />
+		<Unit filename="gui.h" />
+		<Unit filename="helperFunctions.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="sceneBalls.h" />
+		<Unit filename="sceneCore.h" />
+		<Unit filename="sceneData.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

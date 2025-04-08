@@ -1,0 +1,1748 @@
+# depslib dependency file v1.0
+1743134732 source:c:\c++\alarm\main.cpp
+	<iostream>
+	<windows.h>
+	<random>
+	<map>
+	<fstream>
+	<vector>
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	"events.h"
+	"helperFunctions.h"
+	"gui.h"
+	"sceneCore.h"
+	"sceneBalls.h"
+	"sceneData.h"
+
+1742093893 c:\c++\sfml-master\include\sfml\window.hpp
+	<SFML/Window/Clipboard.hpp>
+	<SFML/Window/Context.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/Cursor.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Window/Joystick.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<SFML/Window/Mouse.hpp>
+	<SFML/Window/Sensor.hpp>
+	<SFML/Window/Touch.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/Window.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System.hpp>
+
+1742093894 c:\c++\sfml-master\include\sfml\window\clipboard.hpp
+	<SFML/Window/Export.hpp>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\export.hpp
+	<SFML/Config.hpp>
+
+1742093893 c:\c++\sfml-master\include\sfml\config.hpp
+	"TargetConditionals.h"
+
+1742093894 c:\c++\sfml-master\include\sfml\window\context.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+	<string_view>
+	<cstdint>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\glresource.hpp
+	<SFML/Window/Export.hpp>
+	<memory>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\vector2.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector2.inl>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\export.hpp
+	<SFML/Config.hpp>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\angle.hpp
+	<SFML/System/Angle.inl>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\angle.inl
+	<SFML/System/Angle.hpp>
+	<cassert>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\vector2.inl
+	<SFML/System/Vector2.hpp>
+	<cassert>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\contextsettings.hpp
+	<SFML/Config.hpp>
+	<cstdint>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\cursor.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+	<optional>
+	<cstdint>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\event.hpp
+	<SFML/Window/Joystick.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<SFML/Window/Mouse.hpp>
+	<SFML/Window/Sensor.hpp>
+	<SFML/System/Vector2.hpp>
+	<type_traits>
+	<variant>
+	<SFML/Window/Event.inl>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\joystick.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/String.hpp>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\string.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Utf.hpp>
+	<locale>
+	<string>
+	<cstddef>
+	<cstdint>
+	<SFML/System/String.inl>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\utf.hpp
+	<SFML/Config.hpp>
+	<array>
+	<locale>
+	<cstdint>
+	<cstdlib>
+	<SFML/System/Utf.inl>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\utf.inl
+	<SFML/System/Utf.hpp>
+	<iterator>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\string.inl
+	<SFML/System/String.hpp>
+	<iterator>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\keyboard.hpp
+	<SFML/Window/Export.hpp>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\mouse.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\sensor.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\vector3.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Vector3.inl>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\vector3.inl
+	<SFML/System/Vector3.hpp>
+	<cassert>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\event.inl
+	<SFML/Window/Event.hpp>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\touch.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\videomode.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+	<vector>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\window.hpp
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/Window/WindowBase.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Time.hpp>
+	<memory>
+	<cstdint>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\windowbase.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/Window/Vulkan.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+	<optional>
+	<cstdint>
+	<SFML/Window/WindowBase.inl>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\vulkan.hpp
+	<SFML/Window/Export.hpp>
+	<vector>
+	<cstdint>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\windowenums.hpp
+
+1742093895 c:\c++\sfml-master\include\sfml\window\windowhandle.hpp
+	<SFML/Config.hpp>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\time.hpp
+	<chrono>
+	<cstdint>
+	<SFML/System/Time.inl>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\time.inl
+	<SFML/System/Time.hpp>
+	<ratio>
+	<cassert>
+
+1742093895 c:\c++\sfml-master\include\sfml\window\windowbase.inl
+	<SFML/Window/Event.hpp>
+	<SFML/Window/WindowBase.hpp>
+	<type_traits>
+	<utility>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\clock.hpp
+	<SFML/System/Export.hpp>
+	<chrono>
+	<ratio>
+	<type_traits>
+	<SFML/System/SuspendAwareClock.hpp>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\suspendawareclock.hpp
+	<SFML/System/Export.hpp>
+	<chrono>
+
+1742093893 c:\c++\sfml-master\include\sfml\system.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Err.hpp>
+	<SFML/System/Exception.hpp>
+	<SFML/System/FileInputStream.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/MemoryInputStream.hpp>
+	<SFML/System/Sleep.hpp>
+	<SFML/System/String.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Utf.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\err.hpp
+	<SFML/System/Export.hpp>
+	<iosfwd>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\exception.hpp
+	<SFML/System/Export.hpp>
+	<stdexcept>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\fileinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<filesystem>
+	<memory>
+	<cstdint>
+	<cstdio>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\inputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<optional>
+	<cstdint>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\memoryinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<cstddef>
+	<cstdint>
+
+1742093894 c:\c++\sfml-master\include\sfml\system\sleep.hpp
+	<SFML/System/Export.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\window.hpp
+	<SFML/Window/Clipboard.hpp>
+	<SFML/Window/Context.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/Cursor.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Window/Joystick.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<SFML/Window/Mouse.hpp>
+	<SFML/Window/Sensor.hpp>
+	<SFML/Window/Touch.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/Window.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\window\clipboard.hpp
+	<SFML/Window/Export.hpp>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\export.hpp
+	<SFML/Config.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\config.hpp
+	"TargetConditionals.h"
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\window\context.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+	<string_view>
+	<cstdint>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\glresource.hpp
+	<SFML/Window/Export.hpp>
+	<memory>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\vector2.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector2.inl>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\export.hpp
+	<SFML/Config.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\angle.hpp
+	<SFML/System/Angle.inl>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\angle.inl
+	<SFML/System/Angle.hpp>
+	<cassert>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\vector2.inl
+	<SFML/System/Vector2.hpp>
+	<cassert>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\window\contextsettings.hpp
+	<SFML/Config.hpp>
+	<cstdint>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\window\cursor.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+	<optional>
+	<cstdint>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\event.hpp
+	<SFML/Window/Joystick.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<SFML/Window/Mouse.hpp>
+	<SFML/Window/Sensor.hpp>
+	<SFML/System/Vector2.hpp>
+	<variant>
+	<SFML/Window/Event.inl>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\joystick.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/String.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\string.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Utf.hpp>
+	<locale>
+	<string>
+	<cstddef>
+	<cstdint>
+	<SFML/System/String.inl>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\utf.hpp
+	<SFML/Config.hpp>
+	<array>
+	<locale>
+	<cstdint>
+	<cstdlib>
+	<SFML/System/Utf.inl>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\utf.inl
+	<SFML/System/Utf.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\string.inl
+	<SFML/System/String.hpp>
+	<iterator>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\keyboard.hpp
+	<SFML/Window/Export.hpp>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\mouse.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\sensor.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\vector3.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Vector3.inl>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\vector3.inl
+	<SFML/System/Vector3.hpp>
+	<cassert>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\event.inl
+	<SFML/Window/Event.hpp>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\touch.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\videomode.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+	<vector>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\window.hpp
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/Window/WindowBase.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Time.hpp>
+	<memory>
+	<cstdint>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\windowbase.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/Window/Vulkan.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+	<optional>
+	<cstdint>
+	<SFML/Window/WindowBase.inl>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\vulkan.hpp
+	<SFML/Window/Export.hpp>
+	<vector>
+	<cstdint>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\windowenums.hpp
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\windowhandle.hpp
+	<SFML/Config.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\time.hpp
+	<chrono>
+	<cstdint>
+	<SFML/System/Time.inl>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\time.inl
+	<SFML/System/Time.hpp>
+	<ratio>
+	<cassert>
+
+1742099910 c:\c++\sfml-3.0.0\include\sfml\window\windowbase.inl
+	<SFML/Window/Event.hpp>
+	<SFML/Window/WindowBase.hpp>
+	<utility>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\clock.hpp
+	<SFML/System/Export.hpp>
+	<chrono>
+	<ratio>
+	<type_traits>
+	<SFML/System/SuspendAwareClock.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\suspendawareclock.hpp
+	<SFML/System/Export.hpp>
+	<chrono>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\system.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Err.hpp>
+	<SFML/System/Exception.hpp>
+	<SFML/System/FileInputStream.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/MemoryInputStream.hpp>
+	<SFML/System/Sleep.hpp>
+	<SFML/System/String.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Utf.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\err.hpp
+	<SFML/System/Export.hpp>
+	<iosfwd>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\exception.hpp
+	<SFML/System/Export.hpp>
+	<stdexcept>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\fileinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<filesystem>
+	<memory>
+	<cstdint>
+	<cstdio>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\inputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<optional>
+	<cstdint>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\memoryinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<cstddef>
+	<cstdint>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\system\sleep.hpp
+	<SFML/System/Export.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics.hpp
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/CircleShape.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/ConvexShape.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Font.hpp>
+	<SFML/Graphics/Glyph.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/RenderTexture.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/Shader.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/StencilMode.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/Graphics/VertexBuffer.hpp>
+	<SFML/Graphics/View.hpp>
+	<SFML/Window.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\blendmode.hpp
+	<SFML/Graphics/Export.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\export.hpp
+	<SFML/Config.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\circleshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstddef>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\shape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstddef>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\color.hpp
+	<cstdint>
+	<SFML/Graphics/Color.inl>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\color.inl
+	<SFML/Graphics/Color.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\drawable.hpp
+	<SFML/Graphics/Export.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\primitivetype.hpp
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\rect.hpp
+	<SFML/System/Vector2.hpp>
+	<optional>
+	<SFML/Graphics/Rect.inl>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\rect.inl
+	<SFML/Graphics/Rect.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\renderstates.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/CoordinateType.hpp>
+	<SFML/Graphics/StencilMode.hpp>
+	<SFML/Graphics/Transform.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\coordinatetype.hpp
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\stencilmode.hpp
+	<SFML/Graphics/Export.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\transform.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+	<array>
+	<SFML/Graphics/Transform.inl>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\transform.inl
+	<SFML/Graphics/Transform.hpp>
+	<array>
+	<cstddef>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\transformable.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/System/Angle.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\vertexarray.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<vector>
+	<cstddef>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\vertex.hpp
+	<SFML/Graphics/Color.hpp>
+	<SFML/System/Vector2.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\convexshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<vector>
+	<cstddef>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\font.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Glyph.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/System/Vector2.hpp>
+	<filesystem>
+	<memory>
+	<string>
+	<unordered_map>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\glyph.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\texture.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/CoordinateType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/System/Vector2.hpp>
+	<filesystem>
+	<cstddef>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\image.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+	<filesystem>
+	<optional>
+	<string_view>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\rectangleshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstddef>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\rendertarget.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/CoordinateType.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/StencilMode.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/View.hpp>
+	<SFML/System/Vector2.hpp>
+	<array>
+	<cstddef>
+	<cstdint>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\view.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector2.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\rendertexture.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\renderwindow.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/Window.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\shader.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Glsl.hpp>
+	<SFML/Window/GlResource.hpp>
+	<filesystem>
+	<string>
+	<string_view>
+	<unordered_map>
+	<cstddef>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\glsl.hpp
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+	<cstddef>
+	<SFML/Graphics/Glsl.inl>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\graphics\glsl.inl
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Glsl.hpp>
+	<array>
+	<cstddef>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\sprite.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<array>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\text.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/System/String.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstddef>
+	<cstdint>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\graphics\vertexbuffer.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Window/GlResource.hpp>
+	<cstddef>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio.hpp
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/OutputSoundFile.hpp>
+	<SFML/Audio/PlaybackDevice.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundFileFactory.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/System.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\inputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<filesystem>
+	<memory>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundfilereader.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<optional>
+	<vector>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundchannel.hpp
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector3.hpp>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<filesystem>
+	<memory>
+	<optional>
+	<cstddef>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<memory>
+	<optional>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AudioResource.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector3.hpp>
+	<functional>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\audioresource.hpp
+	<SFML/Audio/Export.hpp>
+	<memory>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\outputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<filesystem>
+	<memory>
+	<vector>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundfilewriter.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<filesystem>
+	<vector>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\playbackdevice.hpp
+	<SFML/Audio/Export.hpp>
+	<optional>
+	<string>
+	<vector>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<memory>
+	<cstdlib>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<SFML/System/Time.hpp>
+	<filesystem>
+	<unordered_set>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<memory>
+	<string>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundfilefactory.hpp
+	<SFML/Audio/Export.hpp>
+	<filesystem>
+	<memory>
+	<unordered_map>
+	<cstddef>
+	<SFML/Audio/SoundFileFactory.inl>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\audio\soundfilefactory.inl
+	<SFML/Audio/SoundFileFactory.hpp>
+	<memory>
+
+1742099908 c:\c++\sfml-3.0.0\include\sfml\network.hpp
+	<SFML/Network/Ftp.hpp>
+	<SFML/Network/Http.hpp>
+	<SFML/Network/IpAddress.hpp>
+	<SFML/Network/Packet.hpp>
+	<SFML/Network/Socket.hpp>
+	<SFML/Network/SocketHandle.hpp>
+	<SFML/Network/SocketSelector.hpp>
+	<SFML/Network/TcpListener.hpp>
+	<SFML/Network/TcpSocket.hpp>
+	<SFML/Network/UdpSocket.hpp>
+	<SFML/System.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\ftp.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/TcpSocket.hpp>
+	<SFML/System/Time.hpp>
+	<filesystem>
+	<string>
+	<vector>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\export.hpp
+	<SFML/Config.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\tcpsocket.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/Socket.hpp>
+	<SFML/System/Time.hpp>
+	<optional>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\socket.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/SocketHandle.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\sockethandle.hpp
+	<SFML/Config.hpp>
+	<basetsd.h>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\http.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/IpAddress.hpp>
+	<SFML/Network/TcpSocket.hpp>
+	<SFML/System/Time.hpp>
+	<iosfwd>
+	<map>
+	<optional>
+	<string>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\ipaddress.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/System/Time.hpp>
+	<iosfwd>
+	<optional>
+	<string>
+	<string_view>
+	<cstdint>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\packet.hpp
+	<SFML/Network/Export.hpp>
+	<string>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\socketselector.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/System/Time.hpp>
+	<memory>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\tcplistener.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/IpAddress.hpp>
+	<SFML/Network/Socket.hpp>
+
+1742099909 c:\c++\sfml-3.0.0\include\sfml\network\udpsocket.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/IpAddress.hpp>
+	<SFML/Network/Socket.hpp>
+	<optional>
+	<vector>
+	<cstddef>
+
+1742354769 source:c:\c++\alarm\llminference.cpp
+	"LLMInference.h"
+	<cstring>
+	<iostream>
+
+1742357848 c:\c++\alarm\llminference.h
+	"llama.h"
+	<string>
+	<vector>
+
+1742353162 c:\c++\llama\include\llama.h
+	"ggml.h"
+	"ggml-cpu.h"
+	"ggml-backend.h"
+	<stddef.h>
+	<stdint.h>
+	<stdio.h>
+	<stdbool.h>
+
+1742353148 c:\c++\llama\ggml\include\ggml.h
+	<stdbool.h>
+	<stddef.h>
+	<stdint.h>
+	<stdio.h>
+
+1742353148 c:\c++\llama\ggml\include\ggml-cpu.h
+	"ggml.h"
+	"ggml-backend.h"
+
+1742353148 c:\c++\llama\ggml\include\ggml-backend.h
+	"ggml.h"
+	"ggml-alloc.h"
+
+1742353148 c:\c++\llama\ggml\include\ggml-alloc.h
+	"ggml.h"
+
+1743033182 c:\c++\alarm\events.h
+
+1743034576 c:\c++\alarm\helperfunctions.h
+
+1743024380 c:\c++\alarm\scenecore.h
+
+1744080324 source:c:\users\jackb\c++enviroment\alarm\main.cpp
+	<iostream>
+	<windows.h>
+	<random>
+	<map>
+	<fstream>
+	<vector>
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	"events.h"
+	"helperFunctions.h"
+	"gui.h"
+	"sceneCore.h"
+	"sceneBalls.h"
+	"sceneData.h"
+
+1733938865 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window.hpp
+	<SFML/Window/Clipboard.hpp>
+	<SFML/Window/Context.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/Cursor.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Window/Joystick.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<SFML/Window/Mouse.hpp>
+	<SFML/Window/Sensor.hpp>
+	<SFML/Window/Touch.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/Window.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\clipboard.hpp
+	<SFML/Window/Export.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\export.hpp
+	<SFML/Config.hpp>
+
+1734742543 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\config.hpp
+	"TargetConditionals.h"
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\context.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+	<string_view>
+	<cstdint>
+
+1733938865 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\glresource.hpp
+	<SFML/Window/Export.hpp>
+	<memory>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\vector2.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector2.inl>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\export.hpp
+	<SFML/Config.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\angle.hpp
+	<SFML/System/Angle.inl>
+
+1740781134 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\angle.inl
+	<SFML/System/Angle.hpp>
+	<cassert>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\vector2.inl
+	<SFML/System/Vector2.hpp>
+	<cassert>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\contextsettings.hpp
+	<SFML/Config.hpp>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\cursor.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+	<optional>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\event.hpp
+	<SFML/Window/Joystick.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<SFML/Window/Mouse.hpp>
+	<SFML/Window/Sensor.hpp>
+	<SFML/System/Vector2.hpp>
+	<variant>
+	<SFML/Window/Event.inl>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\joystick.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/String.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\string.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Utf.hpp>
+	<locale>
+	<string>
+	<cstddef>
+	<cstdint>
+	<SFML/System/String.inl>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\utf.hpp
+	<SFML/Config.hpp>
+	<array>
+	<locale>
+	<cstdint>
+	<cstdlib>
+	<SFML/System/Utf.inl>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\utf.inl
+	<SFML/System/Utf.hpp>
+
+1733938865 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\string.inl
+	<SFML/System/String.hpp>
+	<iterator>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\keyboard.hpp
+	<SFML/Window/Export.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\mouse.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\sensor.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\vector3.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Vector3.inl>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\vector3.inl
+	<SFML/System/Vector3.hpp>
+	<cassert>
+
+1733938865 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\event.inl
+	<SFML/Window/Event.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\touch.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\videomode.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+	<vector>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\window.hpp
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/Window/WindowBase.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Time.hpp>
+	<memory>
+	<cstdint>
+
+1734723166 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\windowbase.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/Window/Vulkan.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+	<optional>
+	<cstdint>
+	<SFML/Window/WindowBase.inl>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\vulkan.hpp
+	<SFML/Window/Export.hpp>
+	<vector>
+	<cstdint>
+
+1733938865 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\windowenums.hpp
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\windowhandle.hpp
+	<SFML/Config.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\time.hpp
+	<chrono>
+	<cstdint>
+	<SFML/System/Time.inl>
+
+1740781770 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\time.inl
+	<SFML/System/Time.hpp>
+	<ratio>
+	<cassert>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\window\windowbase.inl
+	<SFML/Window/Event.hpp>
+	<SFML/Window/WindowBase.hpp>
+	<utility>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\clock.hpp
+	<SFML/System/Export.hpp>
+	<chrono>
+	<ratio>
+	<type_traits>
+	<SFML/System/SuspendAwareClock.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\suspendawareclock.hpp
+	<SFML/System/Export.hpp>
+	<chrono>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Err.hpp>
+	<SFML/System/Exception.hpp>
+	<SFML/System/FileInputStream.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/MemoryInputStream.hpp>
+	<SFML/System/Sleep.hpp>
+	<SFML/System/String.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Utf.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\err.hpp
+	<SFML/System/Export.hpp>
+	<iosfwd>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\exception.hpp
+	<SFML/System/Export.hpp>
+	<stdexcept>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\fileinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<filesystem>
+	<memory>
+	<cstdint>
+	<cstdio>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\inputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<optional>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\memoryinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\system\sleep.hpp
+	<SFML/System/Export.hpp>
+
+1733938865 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics.hpp
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/CircleShape.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/ConvexShape.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Font.hpp>
+	<SFML/Graphics/Glyph.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/RenderTexture.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/Shader.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/StencilMode.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/Graphics/VertexBuffer.hpp>
+	<SFML/Graphics/View.hpp>
+	<SFML/Window.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\blendmode.hpp
+	<SFML/Graphics/Export.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\export.hpp
+	<SFML/Config.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\circleshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstddef>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\shape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstddef>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\color.hpp
+	<cstdint>
+	<SFML/Graphics/Color.inl>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\color.inl
+	<SFML/Graphics/Color.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\drawable.hpp
+	<SFML/Graphics/Export.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\primitivetype.hpp
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\rect.hpp
+	<SFML/System/Vector2.hpp>
+	<optional>
+	<SFML/Graphics/Rect.inl>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\rect.inl
+	<SFML/Graphics/Rect.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\renderstates.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/CoordinateType.hpp>
+	<SFML/Graphics/StencilMode.hpp>
+	<SFML/Graphics/Transform.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\coordinatetype.hpp
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\stencilmode.hpp
+	<SFML/Graphics/Export.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\transform.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+	<array>
+	<SFML/Graphics/Transform.inl>
+
+1740782659 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\transform.inl
+	<SFML/Graphics/Transform.hpp>
+	<array>
+	<cstddef>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\transformable.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/System/Angle.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\vertexarray.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<vector>
+	<cstddef>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\vertex.hpp
+	<SFML/Graphics/Color.hpp>
+	<SFML/System/Vector2.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\convexshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<vector>
+	<cstddef>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\font.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Glyph.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/System/Vector2.hpp>
+	<filesystem>
+	<memory>
+	<string>
+	<unordered_map>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\glyph.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\texture.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/CoordinateType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/System/Vector2.hpp>
+	<filesystem>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\image.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+	<filesystem>
+	<optional>
+	<string_view>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\rectangleshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstddef>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\rendertarget.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/CoordinateType.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/StencilMode.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/View.hpp>
+	<SFML/System/Vector2.hpp>
+	<array>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\view.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector2.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\rendertexture.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/System/Vector2.hpp>
+	<memory>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\renderwindow.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/Window.hpp>
+	<SFML/Window/WindowEnums.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\shader.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Glsl.hpp>
+	<SFML/Window/GlResource.hpp>
+	<filesystem>
+	<string>
+	<string_view>
+	<unordered_map>
+	<cstddef>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\glsl.hpp
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+	<cstddef>
+	<SFML/Graphics/Glsl.inl>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\glsl.inl
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Glsl.hpp>
+	<array>
+	<cstddef>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\sprite.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<array>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\text.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/System/String.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\graphics\vertexbuffer.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Window/GlResource.hpp>
+	<cstddef>
+
+1733938865 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio.hpp
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/OutputSoundFile.hpp>
+	<SFML/Audio/PlaybackDevice.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundFileFactory.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/System.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\inputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<filesystem>
+	<memory>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundfilereader.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<optional>
+	<vector>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundchannel.hpp
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector3.hpp>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<filesystem>
+	<memory>
+	<optional>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<memory>
+	<optional>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AudioResource.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector3.hpp>
+	<functional>
+
+1733938865 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\audioresource.hpp
+	<SFML/Audio/Export.hpp>
+	<memory>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\outputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<filesystem>
+	<memory>
+	<vector>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundfilewriter.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<filesystem>
+	<vector>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\playbackdevice.hpp
+	<SFML/Audio/Export.hpp>
+	<optional>
+	<string>
+	<vector>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<memory>
+	<cstdlib>
+
+1734723166 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<SFML/System/Time.hpp>
+	<filesystem>
+	<unordered_set>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<memory>
+	<string>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1734200263 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundfilefactory.hpp
+	<SFML/Audio/Export.hpp>
+	<filesystem>
+	<memory>
+	<unordered_map>
+	<cstddef>
+	<SFML/Audio/SoundFileFactory.inl>
+
+1733938865 c:\users\jackb\c++enviroment\sfml-3.0.0\include\sfml\audio\soundfilefactory.inl
+	<SFML/Audio/SoundFileFactory.hpp>
+	<memory>
+
+1743033182 c:\users\jackb\c++enviroment\alarm\events.h
+
+1743024380 c:\users\jackb\c++enviroment\alarm\scenecore.h
+
+1743780768 c:\users\jackb\c++enviroment\alarm\sceneballs.h
+
+1743963862 c:\users\jackb\c++enviroment\alarm\scenedata.h
+
+1743474395 c:\c++\alarm\gui.h
+
+1743036602 c:\c++\alarm\sceneballs.h
+
+1743031110 c:\c++\alarm\scenedata.h
+
+1743033567 source:c:\c++\alarm\run.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+	<string.h>
+	<fcntl.h>
+	"win.h"
+	<unistd.h>
+	<sys/mman.h>
+
+1743034126 c:\c++\alarm\win.h
+	<windows.h>
+	<time.h>
+	<stdint.h>
+	<_mingw.h>
+	<sys/types.h>
+
+1743033955 c:\c++\alarm\run.h
+
+1743034576 c:\users\jackb\c++enviroment\alarm\helperfunctions.h
+
+1744084759 c:\users\jackb\c++enviroment\alarm\gui.h
+
