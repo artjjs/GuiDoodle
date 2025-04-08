@@ -10,6 +10,8 @@
       - Map between tags and parameters
       - Map each parameter to it's contents
       - Execute the functions each parameter indicates
-<picture>
-  <img src="ScreenShots\screenShot1.jpg" alt="Image of app" style="width:auto;">
-</picture>
+## Sudo HTML like code :
+![ScreenShot2](https://github.com/user-attachments/assets/400dd095-cef5-4be4-9b02-544e7ab74a9e)
+
+## A few instances of my scene class with diffrent index.txt files positioned at each 4th of the screen :
+![download2 (1)](https://github.com/user-attachments/assets/e9ed4f4e-8af9-4544-b50b-52f883e132b7)
