@@ -1,4 +1,4 @@
-# :tropical_fish: :fish: :tropical_fish: GUI fun SFML C++:tropical_fish: :fish: :tropical_fish:
+# :thumbsup: GUI fun SFML C++ :thumbsup:
 
 ## Simple overview :
 1. Packed basic SFML window into a class
