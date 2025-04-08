@@ -5,6 +5,9 @@
    - Scene Object
       - Chooses how the scene is drawn exactly
       - Creates a instance of the GUI class
+2. Seperated event handling
+   - Moved the keyboard handler and window events into there own file
+3. Pack layout description into gui class
    - GUI class
       - Read .txt SUDO HTML for list of tags
       - Execute functions for given parameters for given tag
@@ -12,6 +15,11 @@
    - Dependency
       - SFML-3.0.0
    - Compiler used : gcc-14.2.0-mingw-w64ucrt-12.0.0-r2
+
+## TO DO :
+## Allow a gui instance to point to other instances's renderTexture
+## use said renderTexture as the image of a shape tag
+## This would allow me to have index.txt SUDO HTML layout files for the layout of another gui's shape tag
 
 ## SUDO HTML :
 ## Allow any set of parameters defaulting to generic tag object for each undefined parameter :
