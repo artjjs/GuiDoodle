@@ -20,6 +20,8 @@
       - Allow a gui instance to point to other instances's renderTexture
       - use said renderTexture as the image of a shape tag
       - This would allow me to have index.txt SUDO HTML layout files for the layout of another gui's shape tag
+      - Use said feature in combination with animation to do seamless scene transitions between pages
+      - Use said feature to create scroll boxes and dropdown menus
 
 ## SUDO HTML :
 ## Allow any set of parameters defaulting to generic tag object for each undefined parameter :
