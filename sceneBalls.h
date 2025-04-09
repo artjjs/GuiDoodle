@@ -132,12 +132,6 @@ public:
         sf::Sprite sprite(texture);
         sprite.setPosition(sf::Vector2f(posX,posY));
 
-        //Hot fix the demo window to size.
-        if (texture.getSize().x > 960)
-        {
-            sprite.setScale(sf::Vector2f(0.5f, 0.5f) );
-        }
-
         //Draw our entire RenderTexture to the main window
         window->draw(sprite);
 

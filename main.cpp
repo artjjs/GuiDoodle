@@ -33,10 +33,10 @@ int main()
     window.create(sf::VideoMode({windowSize.x, windowSize.y}), title);
     window.setFramerateLimit(60);
     //Our packed up scene
-    sceneStats sceneData(960,540,960,540);
+    //sceneStats sceneData(960,540,960,540);
     sceneBalls sceneBall(1920,1080,0,0,std::string("gui/index.txt"));
-    sceneBalls sceneBall2(960,540,960,0,std::string("gui/index2.txt"));
-    sceneBalls sceneBall3(960,540,0,540,std::string("gui/index3.txt"));
+    //sceneBalls sceneBall2(960,540,960,0,std::string("gui/index2.txt"));
+    //sceneBalls sceneBall3(960,540,0,540,std::string("gui/index3.txt"));
     //Windows window handle
     sf::WindowHandle hWnd = window.getNativeHandle();
     //Clock
@@ -58,10 +58,10 @@ int main()
         events(&window,&screenx,&screeny,&windowSize,&windowMiddle,&mouseWheelSpeed,&pause, &hWnd);
         window.clear(sf::Color::Transparent);
         //scene.whileLoop();
-        sceneData.whileLoop(dt,&window);
+        //sceneData.whileLoop(dt,&window);
         sceneBall.whileLoop(dt,&window);
-        sceneBall2.whileLoop(dt,&window);
-        sceneBall3.whileLoop(dt,&window);
+        //sceneBall2.whileLoop(dt,&window);
+        //sceneBall3.whileLoop(dt,&window);
         window.display();
     }
 

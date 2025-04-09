@@ -1072,7 +1072,7 @@ public:
 
 
         if(
-           parameters_All[index].find("pName")!=parameters_All[index].end(),
+           parameters_All[index].find("pName")!=parameters_All[index].end() &&
            parameters_All[index].find("hover")!=parameters_All[index].end()
            )
         {
@@ -1404,31 +1404,15 @@ public:
     {
 
         //DEFAULT SHAPE
+        //I could just have this render to the screen with no adjustment
         sf::RectangleShape rectangle({10.f, 10.f});
         rectangle.setPosition(sf::Vector2f(1,1));
         rectangle.setOutlineColor(sf::Color(100.0, 100.0, 100.0));
         rectangle.setOutlineThickness( 0.0 );
-        //path
-        //origin_x
-        //origin_y
-        //size_x_img
-        //size_y_img
-        //color_r
-        //color_g
-        //color_b
-        //color_a
-        //parent
-        //pName
-        //align_left
-        //align_right
-        //align_bottom
-        //align_top
-        //align_horizontal_center
-        //align_vertical_center
-        //position_x
-        //position_y
 
-        //IF PATH LOAD TEXTURE
+        //Now read parameters and adjust our rectangle
+
+        //Load texture
         sf::Texture texture;
         if(
             parameters_All[index].find("path")!=parameters_All[index].end() &&
@@ -1450,7 +1434,8 @@ public:
             //Sprite
             texture_shapes_List.push_back(texture);
         }
-        //set outline color
+
+        //Set outline color
         if(
            parameters_All[index].find("outline_color_r")!=parameters_All[index].end() &&
            parameters_All[index].find("outline_color_g")!=parameters_All[index].end() &&
@@ -1459,7 +1444,7 @@ public:
         {
             rectangle.setOutlineColor(sf::Color(std::stoi(parameters_All[index]["outline_color_r"]), std::stoi(parameters_All[index]["outline_color_g"]), std::stoi(parameters_All[index]["outline_color_b"])));
         }
-        //set outline size
+        //Set outline size
         if(
            parameters_All[index].find("outline_size")!=parameters_All[index].end()
            )
@@ -1468,7 +1453,7 @@ public:
         }
 
 
-        //IF RGBA THEN COLOR
+        //If (r g b a) color
         if(
            parameters_All[index].find("color_r")!=parameters_All[index].end() &&
            parameters_All[index].find("color_g")!=parameters_All[index].end() &&
@@ -1680,6 +1665,15 @@ public:
 
         }
 
+        //IF SIZE X Y SET SIZE
+        if(
+           parameters_All[index].find("size_x")!=parameters_All[index].end() &&
+           parameters_All[index].find("size_y")!=parameters_All[index].end()
+           )
+        {
+            rectangle.setSize({std::stoi(parameters_All[index]["size_x"]), std::stoi(parameters_All[index]["size_y"])});
+        }
+
         //TRANSLATIONS
         if(
            parameters_All[index].find("position_x")!=parameters_All[index].end() &&
@@ -1718,15 +1712,6 @@ public:
                                 )
                    );
             }
-        }
-
-        //IF SIZE X Y SET SIZE
-        if(
-           parameters_All[index].find("size_x")!=parameters_All[index].end() &&
-           parameters_All[index].find("size_y")!=parameters_All[index].end()
-           )
-        {
-            rectangle.setSize({std::stoi(parameters_All[index]["size_x"]), std::stoi(parameters_All[index]["size_y"])});
         }
 
         //IF IS A PARENT SAVE DATA
@@ -1917,13 +1902,3 @@ public:
     }
 
 };
-
-//BUTTON
-//DROP DOWN MENU
-//SCROLL BOX
-//CheckBox
-//Text Input Box
-//
-//TRY AND SETUP HAVING ANOTHER GUI OBJECT AS AN ELEMENT
-//HAVE A GUI OBJECT DRAW INTO A TEXTURE THEN APPLY THAT AS THE BACKGROUND OF A SHAPE TAG OBJECT
-//THEN TRANSLATE MOUSE CLICKS FROM OUR TOP LEVEL GUI OBJECTS WINDOW SPACE TO THE SHAPE'S RELATIVE WINDOW SPACE
