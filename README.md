@@ -1,4 +1,4 @@
-# :thumbsup: GuiDoodle :thumbsup:
+# :thumbsup: Gui Doodle :thumbsup:
 
 ## Simple overview :
 1. Packed basic SFML window into a class
