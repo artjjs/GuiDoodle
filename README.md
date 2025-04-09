@@ -1,4 +1,4 @@
-# :thumbsup: GUI fun SFML C++ :thumbsup:
+# :thumbsup: GuiDoodle :thumbsup:
 
 ## Simple overview :
 1. Packed basic SFML window into a class
