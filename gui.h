@@ -232,10 +232,6 @@ public:
         {
             tag_Shape(index);
         }
-        if(tag_id == 4)
-        {
-            tag_IMG(index);
-        }
         return 0;
     }
 
@@ -262,10 +258,6 @@ public:
         if(tag_id == 2)
         {
             tag_Shape_Animation(index,dt);
-        }
-        if(tag_id == 4)
-        {
-            tag_IMG_Animation(index,dt);
         }
         return 0;
     }
@@ -322,6 +314,154 @@ public:
                 //Move object by our speed
                 text_List[ text_List_Index ].setPosition(sf::Vector2f(text_object.x,text_object.y+ (text_Velocity_List[ nameP ].y ) ));
 
+            }
+            catch (const std::invalid_argument& e)
+            {
+            }
+        }
+        //Color change
+        if(
+           parameters_All[index].find("cpulse")!=parameters_All[index].end() &&
+           parameters_All[index].find("position_x")!=parameters_All[index].end() &&
+           parameters_All[index].find("position_y")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_color_r")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_color_g")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_color_b")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_color_a")!=parameters_All[index].end() &&
+           parameters_All[index].find("color_r")!=parameters_All[index].end() &&
+           parameters_All[index].find("color_g")!=parameters_All[index].end() &&
+           parameters_All[index].find("color_b")!=parameters_All[index].end() &&
+           parameters_All[index].find("color_a")!=parameters_All[index].end() &&
+           parameters_All[index].find("pName")!=parameters_All[index].end()
+           )
+        {
+            int speed;
+            try {
+                parameters_All[index]["cpulse"];
+                //c++ parameter index to text_List index
+                std::string nameP = parameters_All[index]["pName"];
+                //Velocity for this tag is at nameP in text_Velocity_List
+                sf::Vector2f speed = text_Velocity_List[ nameP ];
+                int pos_X = std::stoi( parameters_All[index]["position_x"] );
+                int pos_Y = std::stoi( parameters_All[index]["position_y"] );
+
+                int animation_color_r = std::stoi( parameters_All[index]["animation_color_r"] );
+                int animation_color_g = std::stoi( parameters_All[index]["animation_color_g"] );
+                int animation_color_b = std::stoi( parameters_All[index]["animation_color_b"] );
+                int animation_color_a = std::stoi( parameters_All[index]["animation_color_a"] );
+
+                int color_r = std::stoi( parameters_All[index]["color_r"] );
+                int color_g = std::stoi( parameters_All[index]["color_g"] );
+                int color_b = std::stoi( parameters_All[index]["color_b"] );
+                int color_a = std::stoi( parameters_All[index]["color_a"] );
+
+                //The index of our sf::text object
+                int text_List_Index = text_id_List[ nameP ];
+
+                //Copy obj color and modify it
+                sf::Color temp_Color = text_List[ text_List_Index ].getFillColor();
+
+                //R
+                if(color_r<animation_color_r)
+                {
+                    if(color_Tracker_r < color_r)
+                    {
+                        color_Tracker_r=-color_Tracker_r;
+                    }
+                    else if(color_Tracker_r > animation_color_r)
+                    {
+                        color_Tracker_r=-color_Tracker_r;
+                    }
+                }
+                else if(color_r>animation_color_r)
+                {
+                    if(color_Tracker_r < animation_color_r)
+                    {
+                        color_Tracker_r=-color_Tracker_r;
+                    }
+                    else if(color_Tracker_r > color_r)
+                    {
+                        color_Tracker_r=-color_Tracker_r;
+                    }
+                }
+                //G
+                if(color_g<animation_color_g)
+                {
+                    if(color_Tracker_g < color_g)
+                    {
+                        color_Tracker_g=-color_Tracker_g;
+                    }
+                    else if(color_Tracker_g > animation_color_g)
+                    {
+                        color_Tracker_g=-color_Tracker_g;
+                    }
+                }
+                else if(color_g>animation_color_g)
+                {
+                    if(color_Tracker_g < animation_color_g)
+                    {
+                        color_Tracker_g=-color_Tracker_g;
+                    }
+                    else if(color_Tracker_g > color_g)
+                    {
+                        color_Tracker_g=-color_Tracker_g;
+                    }
+                }
+                //B
+                if(color_b<animation_color_b)
+                {
+                    if(color_Tracker_b < color_b)
+                    {
+                        color_Tracker_b=-color_Tracker_b;
+                    }
+                    else if(color_Tracker_b > animation_color_b)
+                    {
+                        color_Tracker_b=-color_Tracker_b;
+                    }
+                }
+                else if(color_b>animation_color_b)
+                {
+                    if(color_Tracker_b < animation_color_b)
+                    {
+                        color_Tracker_b=-color_Tracker_b;
+                    }
+                    else if(color_Tracker_b > color_b)
+                    {
+                        color_Tracker_b=-color_Tracker_b;
+                    }
+                }
+                //A
+                if(color_a<animation_color_a)
+                {
+                    if(color_Tracker_a < color_a)
+                    {
+                        color_Tracker_a=-color_Tracker_a;
+                    }
+                    else if(color_Tracker_a > animation_color_a)
+                    {
+                        color_Tracker_a=-color_Tracker_a;
+                    }
+                }
+                else if(color_a>animation_color_a)
+                {
+                    if(color_Tracker_a < animation_color_a)
+                    {
+                        color_Tracker_a=-color_Tracker_a;
+                    }
+                    else if(color_Tracker_a > color_a)
+                    {
+                        color_Tracker_a=-color_Tracker_a;
+                    }
+                }
+
+                //modify our color value
+                temp_Color.r+=color_Tracker_r;
+                temp_Color.g+=color_Tracker_g;
+                temp_Color.b+=color_Tracker_b;
+                temp_Color.a+=color_Tracker_a;
+
+                //speed here is our input scale factor for the circle
+                text_List[ text_List_Index ].setFillColor(temp_Color);
             }
             catch (const std::invalid_argument& e)
             {
@@ -779,12 +919,6 @@ public:
         return 0;
     }
 
-    int tag_IMG_Animation(int index, float dt)
-    {
-
-        return 0;
-    }
-
     //FUNCTIONS FOR ALL NON MAIN LOOP STUFF AKA EXECUTES 1 TIME
     //P_TAG
     int tag_P(int index)
@@ -793,7 +927,7 @@ public:
         sf::Text text(*font);
         text.setCharacterSize(24); // in pixels, not points!
         text.setFillColor(sf::Color::Black);
-
+        sf::Vector2f bounds;
         //PARAMETER LIST---------------------------------------------------------------------------------------------
         //string
         //size
@@ -840,6 +974,7 @@ public:
         {
             //we need to break the string up into chunks for wrap function
             text.setString(parameters_All[index]["string"]);
+            bounds = text.getLocalBounds().size;
         }
 
         //IF HAS A SIZE
@@ -881,7 +1016,7 @@ public:
                 //the full window size - sprites size so it still shows
                 text.setPosition(
                                     sf::Vector2f(
-                                                float(size_x-std::stoi(parameters_All[index]["size"])),
+                                                float(size_x-(bounds.x/2.0f)),
                                                 text.getPosition().y
                                                 )
                                     );
@@ -903,7 +1038,7 @@ public:
                 //half the window - half the sprite size
                 text.setPosition(
                                    sf::Vector2f(
-                                                (size_x/2.0f) - (std::stoi(parameters_All[index]["size_x"])/2.0f),
+                                                (size_x/2.0f) - (bounds.x/2.0f),
                                                  text.getPosition().y
                                                  )
                                    );
@@ -1070,7 +1205,7 @@ public:
             parent_Map.insert ( std::pair<std::string,std::vector<float>>( parameters_All[index]["pName"],data_List ) );
         }
 
-
+        //HOVER ANIMATION
         if(
            parameters_All[index].find("pName")!=parameters_All[index].end() &&
            parameters_All[index].find("hover")!=parameters_All[index].end()
@@ -1082,6 +1217,29 @@ public:
 
             //Store a velocity to track on this tag
             text_Velocity_List.insert( std::make_pair(a , sf::Vector2f( 0.0, std::stoi( parameters_All[index]["hover"]) ) ));
+
+            //Just count the list size ATM
+            int in=0;
+            for(int j=0;j<text_List.size();j++){
+                in++;
+            }
+
+            //Record the position we pushed this item into
+            text_id_List.insert( std::make_pair(a , in));
+        }
+
+        //COLOR ANIMATION
+        if(
+           parameters_All[index].find("pName")!=parameters_All[index].end() &&
+           parameters_All[index].find("cpulse")!=parameters_All[index].end()
+           )
+        {
+            //Store a copy of the starting position
+            std::string a=parameters_All[index]["pName"];
+            text_origin_id_List.insert( std::make_pair(a , text.getPosition()));
+
+            //Store a velocity to track on this tag
+            text_Velocity_List.insert( std::make_pair(a , sf::Vector2f( 0.0, std::stoi( parameters_All[index]["cpulse"]) ) ));
 
             //Just count the list size ATM
             int in=0;
