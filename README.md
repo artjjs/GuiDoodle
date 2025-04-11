@@ -30,6 +30,7 @@
       - Create scene swapping as click responce
       - Fix freeze on resize issue
       - Create cmake build system
+      - Make proof of use clone of a popular website's layout
 
 ## SUDO HTML :
 ## Allow any set of parameters defaulting to generic tag object for each undefined parameter :
