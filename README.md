@@ -12,6 +12,7 @@
       - Read .txt SUDO HTML for list of tags
       - Execute functions for given parameters for given tag
       - Run animations presented as tag parameters
+      - Run a function as Click responce when clickable parameter exists
    - Dependency
       - SFML-3.0.0
    - Compiler used : gcc-14.2.0-mingw-w64ucrt-12.0.0-r2
