@@ -27,7 +27,6 @@
       - Have temp animation for click responces
       - Have Gui class take pointer to another Gui classes rendertexture as a texture to use on shapes "Entire layout as shapes texture"
       - Create scene swapping as click responce
-      - Create flahcard program layout pages
       - Fix freeze on resize issue
       - Create cmake build system
 
