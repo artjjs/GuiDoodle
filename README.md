@@ -18,11 +18,15 @@
    - Compiler used : gcc-14.2.0-mingw-w64ucrt-12.0.0-r2
 
    - TO DO :
-      - Allow a gui instance to point to other instances's renderTexture
-      - use said renderTexture as the image of a shape tag
-      - This would allow me to have index.txt SUDO HTML layout files for the layout of another gui's shape tag
-      - Use said feature in combination with animation to do seamless scene transitions between pages
-      - Use said feature to create scroll boxes and dropdown menus
+      - Have layout file that uses sudo html ✔️
+      - Read all images in images folder into memory for quick use ✔️
+      - Package scene into it's own class ✔️
+      - Create Gui class to execute the given sudo html tags ✔️
+      - Have animation tags border pulse, hover, color pulse, rotate, wiggle, size pulse ✔️
+      - Have any element able to respond to clicks ✔️
+      - Fix freeze on resize
+      - Create cmake build system
+      - Have Gui class take pointer to another Gui classes rendertexture as a texture to use on shapes "Entire layout as shapes texture"
 
 ## SUDO HTML :
 ## Allow any set of parameters defaulting to generic tag object for each undefined parameter :
