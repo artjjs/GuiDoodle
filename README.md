@@ -24,9 +24,12 @@
       - Create Gui class to execute the given sudo html tags ✔️
       - Have animation tags border pulse, hover, color pulse, rotate, wiggle, size pulse ✔️
       - Have any element able to respond to clicks ✔️
-      - Fix freeze on resize
-      - Create cmake build system
+      - Have temp animation for click responces
       - Have Gui class take pointer to another Gui classes rendertexture as a texture to use on shapes "Entire layout as shapes texture"
+      - Create scene swapping as click responce
+      - Create flahcard program layout pages
+      - Fix freeze on resize issue
+      - Create cmake build system
 
 ## SUDO HTML :
 ## Allow any set of parameters defaulting to generic tag object for each undefined parameter :
