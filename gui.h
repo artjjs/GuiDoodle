@@ -467,6 +467,52 @@ public:
             {
             }
         }
+        //SizePulse animation
+        //RELATIVE CHANGE
+        if(
+           parameters_All[index].find("spulse")!=parameters_All[index].end() &&
+           parameters_All[index].find("position_x")!=parameters_All[index].end() &&
+           parameters_All[index].find("position_y")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_size")!=parameters_All[index].end() &&
+           parameters_All[index].find("pName")!=parameters_All[index].end()
+           )
+        {
+            int speed;
+            try {
+                //c++ parameter index to text_List index
+                std::string nameP = parameters_All[index]["pName"];
+                //Velocity for this tag is at nameP in text_Velocity_List
+                sf::Vector2f speed = text_Velocity_List[ nameP ];
+                int pos_X = std::stoi( parameters_All[index]["position_x"] );
+                int pos_Y = std::stoi( parameters_All[index]["position_y"] );
+                int animation_size = std::stoi( parameters_All[index]["animation_size"] );
+                //The index of our text object
+                int text_List_Index = text_id_List[ nameP ];
+
+                //Pull our original position
+                sf::Vector2f shape_object_start = shape_origin_id_List[ nameP ];
+
+                //if our border size is over the spulse parameter size
+                if(text_List[ text_List_Index ].getScale().x>animation_size)
+                {
+                    //velocity is -
+                    text_Velocity_List[ nameP ].x = -(std::stoi( parameters_All[index]["spulse"] )*0.01f);
+                }
+                if(text_List[ text_List_Index ].getScale().x<0)
+                {
+                    //velocity is +
+                    text_Velocity_List[ nameP ].x = std::stoi( parameters_All[index]["spulse"] )*0.01f;
+                }
+                text_Velocity_List[ nameP ].x += text_Velocity_List[ nameP ].y;
+                text_Velocity_List[ nameP ].y = text_Velocity_List[ nameP ].x;
+                //sf::Vector2f( text_Velocity_List[ nameP ].y + (text_Velocity_List[ nameP ].x)*0.01 ,text_Velocity_List[ nameP ].y + (text_Velocity_List[ nameP ].x)*0.01 )
+                //speed here is our input scale factor for the text
+                text_List[ text_List_Index ].setScale( sf::Vector2f( text_Velocity_List[ nameP ].x, text_Velocity_List[ nameP ].x ) );
+            }
+            catch (const std::invalid_argument& e)
+            {
+            }
+        }
         return 0;
     }
 
@@ -1251,309 +1297,32 @@ public:
             text_id_List.insert( std::make_pair(a , in));
         }
 
+        //Size ANIMATION
+        if(
+           parameters_All[index].find("pName")!=parameters_All[index].end() &&
+           parameters_All[index].find("spulse")!=parameters_All[index].end()
+           )
+        {
+            //Store a copy of the starting position
+            std::string a=parameters_All[index]["pName"];
+            text_origin_id_List.insert( std::make_pair(a , text.getPosition()));
+
+            //Store a velocity to track on this tag
+            text_Velocity_List.insert( std::make_pair(a , sf::Vector2f( std::stoi( parameters_All[index]["spulse"]) , 1 ) ) );
+
+            //Just count the list size ATM
+            int in=0;
+            for(int j=0;j<text_List.size();j++){
+                in++;
+            }
+
+            //Record the position we pushed this item into
+            text_id_List.insert( std::make_pair(a , in));
+        }
+
         //PUSH TEXT OBJECT AND RETURN
         text_List.push_back(text);
 
-        return 0;
-    }
-
-    //IMG tag
-    int tag_IMG(int index)
-    {
-
-        //PARAMETER LIST---------------------------------------------------------------------------------------------
-        //path
-        //origin_x
-        //origin_y
-        //size_x
-        //size_y
-        //color_r
-        //color_g
-        //color_b
-        //color_a
-        //parent
-        //pName
-        //align_left
-        //align_right
-        //align_bottom
-        //align_top
-        //align_horizontal_center
-        //align_vertical_center
-        //position_x
-        //position_y
-
-        //DEFAULT TEXTURE
-        sf::Texture texture;
-        texture.setSmooth(true);
-
-        //IF PATH LOAD IMAGE
-        if(
-           parameters_All[index].find("path")!=parameters_All[index].end(),
-           parameters_All[index].find("origin_x")!=parameters_All[index].end(),
-           parameters_All[index].find("origin_y")!=parameters_All[index].end(),
-           parameters_All[index].find("size_x")!=parameters_All[index].end(),
-           parameters_All[index].find("size_y")!=parameters_All[index].end()
-           )
-        {
-            texture.loadFromFile(
-                                parameters_All[index]["path"],
-                                false,
-                                sf::IntRect(
-                                                {std::stoi(parameters_All[index]["origin_x"]),std::stoi(parameters_All[index]["origin_y"])},
-                                                {std::stoi(parameters_All[index]["size_x"]),std::stoi(parameters_All[index]["size_y"])}
-                                            )
-                                 );
-        }
-        //NO IMAGE PASSED? LOAD DEFAULT IMAGE
-        else if(
-               parameters_All[index].find("origin_x")!=parameters_All[index].end(),
-               parameters_All[index].find("origin_y")!=parameters_All[index].end(),
-               parameters_All[index].find("size_x")!=parameters_All[index].end(),
-               parameters_All[index].find("size_y")!=parameters_All[index].end()
-                )
-        {
-            texture.loadFromFile(
-                                "images/char.png",
-                                false,
-                                sf::IntRect(
-                                                {std::stoi(parameters_All[index]["origin_x"]),std::stoi(parameters_All[index]["origin_y"])},
-                                                {std::stoi(parameters_All[index]["size_x"]),std::stoi(parameters_All[index]["size_y"])}
-                                            )
-                                 );
-        }
-
-        //SAVE TEXTURE
-        texture_List.push_back(texture);
-
-        //DEFAULT SPRITE
-        sf::Sprite sprite(texture_List[texture_List.size()-1]);
-
-        //IF RGBA
-        if(parameters_All[index].find("color_r")!=parameters_All[index].end() && parameters_All[index].find("color_g")!=parameters_All[index].end() && parameters_All[index].find("color_b")!=parameters_All[index].end() && parameters_All[index].find("color_a")!=parameters_All[index].end())
-        {
-        sprite.setColor(
-                          sf::Color(std::stoi(parameters_All[index]["color_r"]),
-                                    std::stoi(parameters_All[index]["color_g"]),
-                                    std::stoi(parameters_All[index]["color_b"]),
-                                    std::stoi(parameters_All[index]["color_a"])
-                                    )
-                          );
-        }
-
-        //ALIGNMENT OPERATIONS
-        //PARENT---------------------------------------------------------------------------------------------
-        if(
-           parameters_All[index].find("parent")!=parameters_All[index].end()
-           )
-        {
-            //PARENT DATA
-            std::string parentName= parameters_All[index]["parent"];
-            std::vector<float> maper;
-            maper = parent_Map.at(parentName);
-            float size_x = maper[0];
-            float size_y = maper[1];
-            float position_x = maper[2];
-            float position_y = maper[3];
-            //ALIGN_RIGHT
-            if(parameters_All[index].find("align_right")!=parameters_All[index].end())
-            {
-                //the full window size - sprites size so it still shows
-                sprite.setPosition(
-                                    sf::Vector2f(
-                                                float(size_x-std::stoi(parameters_All[index]["size_x"])),
-                                                sprite.getPosition().y
-                                                )
-                                    );
-            }
-
-            if(parameters_All[index].find("align_left")!=parameters_All[index].end())
-            {
-                //Just push left
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                0.0f,
-                                                sprite.getPosition().y
-                                                )
-                                   );
-            }
-
-            if(parameters_All[index].find("align_horizontal_center")!=parameters_All[index].end())
-            {
-                //half the window - half the sprite size
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                float(size_x/2.0f) - (std::stoi(parameters_All[index]["size_x"])/2.0f),
-                                                 sprite.getPosition().y
-                                                 )
-                                   );
-            }
-
-            if(parameters_All[index].find("align_top")!=parameters_All[index].end())
-            {
-                //just 0 y
-                sprite.setPosition(
-                                   sf::Vector2f(sprite.getPosition().x,
-                                                0.0f
-                                                )
-                                   );
-            }
-
-            if(parameters_All[index].find("align_vertical_center")!=parameters_All[index].end())
-            {
-                //same align but on y
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                sprite.getPosition().x,
-                                                float((size_y/2.0f) - (std::stoi(parameters_All[index]["size_y"])/2.0f))
-                                                )
-                                   );
-            }
-
-            if(parameters_All[index].find("align_bottom")!=parameters_All[index].end())
-            {
-                //force to bottom on y
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                sprite.getPosition().x,
-                                                float(size_x - std::stoi(parameters_All[index]["size_y"]))
-                                                )
-                                   );
-            }
-
-        }
-        //IF NO PARENT---------------------------------------------------------------------------------------------
-        else
-        {
-            //ALIGNMENT OPERATIONS
-            //check for the tag existing
-            if(parameters_All[index].find("align_right")!=parameters_All[index].end())
-            {
-                //the full window size - sprites size so it still shows
-                sprite.setPosition(
-                                    sf::Vector2f(
-                                                float(float(getWindowWidth(window))-std::stoi(parameters_All[index]["size_x"])),
-                                                sprite.getPosition().y
-                                                )
-                                    );
-            }
-
-            if(parameters_All[index].find("align_left")!=parameters_All[index].end())
-            {
-                //Just push left
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                0.0f,
-                                                sprite.getPosition().y
-                                                )
-                                   );
-            }
-
-            if(parameters_All[index].find("align_horizontal_center")!=parameters_All[index].end())
-            {
-                //half the window - half the sprite size
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                (float(getWindowWidth(window))/2.0f) - (std::stoi(parameters_All[index]["size_x"])/2.0f),
-                                                 sprite.getPosition().y
-                                                 )
-                                   );
-            }
-
-            if(parameters_All[index].find("align_top")!=parameters_All[index].end())
-            {
-                //just 0 y
-                sprite.setPosition(
-                                   sf::Vector2f(sprite.getPosition().x,
-                                                0.0f
-                                                )
-                                   );
-            }
-
-            if(parameters_All[index].find("align_vertical_center")!=parameters_All[index].end())
-            {
-                //same align but on y
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                sprite.getPosition().x,
-                                                (float(getWindowHeight(window))/2.0f) - (std::stoi(parameters_All[index]["size_y"])/2.0f)
-                                                )
-                                   );
-            }
-
-            if(parameters_All[index].find("align_bottom")!=parameters_All[index].end())
-            {
-                //force to bottom on y
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                sprite.getPosition().x,
-                                                float(getWindowHeight(window)) - std::stoi(parameters_All[index]["size_y"])
-                                                )
-                                   );
-            }
-
-        }
-
-        //PARENT---------------------------------------------------------------------------------------------
-        //If there is a parent align relative to parent
-        if(
-           parameters_All[index].find("parent")!=parameters_All[index].end()
-           )
-        {
-            //PARENT DATA
-            std::string parentName= parameters_All[index]["parent"];
-            std::vector<float> maper;
-            maper = parent_Map.at(parentName);
-            float size_x = maper[0];
-            float size_y = maper[1];
-            float position_x = maper[2];
-            float position_y = maper[3];
-
-            //SET POSITION
-            if(parameters_All[index].find("position_x")!=parameters_All[index].end() && parameters_All[index].find("position_y")!=parameters_All[index].end())
-            {
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                sprite.getPosition().x + std::stoi(parameters_All[index]["position_x"]) + position_x,
-                                                sprite.getPosition().y + std::stoi(parameters_All[index]["position_y"]) + position_y
-                                                )
-                                   );
-            }
-        }
-
-        //IF NO PARENT---------------------------------------------------------------------------------------------
-        else
-        {
-            //SET POSITION
-            if(parameters_All[index].find("position_x")!=parameters_All[index].end() && parameters_All[index].find("position_y")!=parameters_All[index].end())
-            {
-                sprite.setPosition(
-                                   sf::Vector2f(
-                                                sprite.getPosition().x + std::stoi(parameters_All[index]["position_x"]),
-                                                sprite.getPosition().y + std::stoi(parameters_All[index]["position_y"])
-                                                )
-                                   );
-            }
-        }
-
-        //IF IS A PARENT SAVE PARENT DATA
-        if(
-           parameters_All[index].find("pName")!=parameters_All[index].end() &&
-           parameters_All[index].find("size_x")!=parameters_All[index].end() &&
-           parameters_All[index].find("size_y")!=parameters_All[index].end() &&
-           parameters_All[index].find("position_x")!=parameters_All[index].end() &&
-           parameters_All[index].find("position_y")!=parameters_All[index].end()
-           )
-        {
-            std::vector<float> data_List;
-            data_List.push_back( float(std::stoi( parameters_All[index]["size_x"] )) );
-            data_List.push_back( float(std::stoi( parameters_All[index]["size_y"] )) );
-            data_List.push_back( float(std::stoi( parameters_All[index]["position_x"] ))+sprite.getPosition().x );
-            data_List.push_back( float(std::stoi( parameters_All[index]["position_y"] ))+sprite.getPosition().y );
-            parent_Map.insert ( std::pair<std::string,std::vector<float>>( parameters_All[index]["pName"],data_List ) );
-        }
-
-        //Load list of sprites with this tag's sprite
-        sprite_List.push_back(sprite);
         return 0;
     }
 

@@ -1,5 +1,5 @@
 
-void events(sf::RenderWindow* window,float* screenx, float* screeny,sf::Vector2f* windowSize,sf::Vector2f* windowMiddle,float* mouseWheelSpeed,int* pause, sf::WindowHandle* hWnd)
+void events(sf::RenderWindow* window,float* screenx, float* screeny,sf::Vector2f* windowSize,sf::Vector2f* windowMiddle,float* mouseWheelSpeed,int* pause, sf::WindowHandle* hWnd, sf::RenderTexture* rwindow)
 {
 
     while (const std::optional event = window->pollEvent())
@@ -16,10 +16,7 @@ void events(sf::RenderWindow* window,float* screenx, float* screeny,sf::Vector2f
             *screeny=resized->size.y;
             *windowSize = (sf::Vector2f (*screenx,*screeny));
             *windowMiddle = (sf::Vector2f (*screenx/2.0f,*screeny/2.0f));
-            std::cout << "WindowSize (" << windowSize->x << "," << windowSize->y << ")" << std::endl;
-            //Change the window into a rounded window after resize
-            //HRGN hRgn = CreateRoundRectRgn(0, 0, *screenx, *screeny, 150.0f, 150.0f); // Adjust size and radius as needed
-            //SetWindowRgn(*hWnd, hRgn, true);
+            rwindow->resize( sf::Vector2u(*screenx, *screeny) );
         }
         //TRACK MOUSE
         else if (const auto* mouseMoved = event->getIf<sf::Event::MouseMoved>())

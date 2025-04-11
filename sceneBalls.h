@@ -5,6 +5,7 @@ public:
     sceneData sceneData;
     sf::RenderTexture renderTexture;
     float posX, posY;
+    JGUI *guiFramePointer;
     //OPENING ACTIONS
     sceneBalls(float x,float y,float posXin, float posYin, std::string path)
     {
@@ -33,6 +34,7 @@ public:
         loadDir(&dirList, &texList, &texPathToName);
         //Create a instance of my SUDO HTML GUI class
         JGUI guiFrame(&renderTexture,&sceneData.fonts.at(0));
+        guiFramePointer = &guiFrame;
         guiFrame.load(path);
         guiFrame.execute_Tags();
         sceneData.guis.push_back(guiFrame);

@@ -30,19 +30,22 @@ int main()
     sf::Vector2f windowSize=sf::Vector2f(screenx,screeny);
     sf::Vector2f windowMiddle=sf::Vector2f(screenx/2.0f,screeny/2.0f);
     std::string title="Jack App";//TITLE
+
+    //Window
     window.create(sf::VideoMode({windowSize.x, windowSize.y}), title);
     window.setFramerateLimit(60);
+
     //Our packed up scene
-    //sceneStats sceneData(960,540,960,540);
     sceneBalls sceneBall(1920,1080,0,0,std::string("gui/index.txt"));
-    //sceneBalls sceneBall2(960,540,960,0,std::string("gui/index2.txt"));
-    //sceneBalls sceneBall3(960,540,0,540,std::string("gui/index3.txt"));
+
     //Windows window handle
     sf::WindowHandle hWnd = window.getNativeHandle();
+
     //Clock
     sf::Clock clock;
     clock.start();
     float dt=0.0;
+
     //EVENTS VARIABLES
     int pause=0;
     sf::Vector2f mousePos;
@@ -55,13 +58,9 @@ int main()
     while (window.isOpen())
     {
         dt=clock.restart().asSeconds();
-        events(&window,&screenx,&screeny,&windowSize,&windowMiddle,&mouseWheelSpeed,&pause, &hWnd);
+        events(&window,&screenx,&screeny,&windowSize,&windowMiddle,&mouseWheelSpeed,&pause, &hWnd, sceneBall.guiFramePointer->window);
         window.clear(sf::Color::Transparent);
-        //scene.whileLoop();
-        //sceneData.whileLoop(dt,&window);
         sceneBall.whileLoop(dt,&window);
-        //sceneBall2.whileLoop(dt,&window);
-        //sceneBall3.whileLoop(dt,&window);
         window.display();
     }
 
