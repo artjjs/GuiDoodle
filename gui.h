@@ -54,9 +54,18 @@ public:
 
     sf::Clock time;
 
+    sf::Vector2f* mouseCurrentPos;
+    sf::Vector2f* mouseClickPosRight;
+    sf::Vector2f* mouseClickPosLeft;
+    sf::Vector2f* mouseClickPosMiddle;
     //INI WINDOW PTR AND FONT
-    JGUI(sf::RenderTexture* windowIn, sf::Font* fontIn)
+    JGUI(sf::RenderTexture* windowIn, sf::Font* fontIn,sf::Vector2f* mouseCurrentPosIn,sf::Vector2f* mouseClickPosRightIn,sf::Vector2f* mouseClickPosLeftIn,sf::Vector2f* mouseClickPosMiddleIn)
     {
+        mouseCurrentPos=mouseCurrentPosIn;
+        mouseClickPosRight=mouseClickPosRightIn;
+        mouseClickPosLeft=mouseClickPosLeftIn;
+        mouseClickPosMiddle=mouseClickPosMiddleIn;
+
         window = windowIn;
         time.start();
         //Load font
@@ -258,6 +267,88 @@ public:
         if(tag_id == 2)
         {
             tag_Shape_Animation(index,dt);
+        }
+        return 0;
+    }
+
+    //GO OVER ALL TAGS
+    int execute_Tags_Clickable(float dt)
+    {
+        //Go over all the tags we collected
+        for(unsigned int i=0; i < tags_List.size();i++)
+        {
+            execute_Tag_Clickable(tags_List[i], contents_List[i],i,dt);
+        }
+        return 0;
+    }
+
+    //DURRING THE MAIN LOOP RUN ALL ANIMATION FOR ALL TAGS
+    int execute_Tag_Clickable(std::string tag, std::string contents,int index,float dt)
+    {
+        int tag_id = tags_IDS[tag];
+        //Execute a specific function for a given tag id number
+        if(tag_id == 1)
+        {
+            tag_P_Clickable(index,dt);
+        }
+        if(tag_id == 2)
+        {
+            tag_Shape_Clickable(index,dt);
+        }
+        return 0;
+    }
+
+    //CLICK P
+    int tag_P_Clickable(int index, float dt)
+    {
+        //Check if clickable
+        if(
+           parameters_All[index].find("clickable")!=parameters_All[index].end() &&
+           parameters_All[index].find("size_x")!=parameters_All[index].end() &&
+           parameters_All[index].find("size_y")!=parameters_All[index].end() &&
+           parameters_All[index].find("pName")!=parameters_All[index].end()
+           )
+        {
+            int size_X = std::stoi( parameters_All[index]["size_x"] );
+            int size_Y = std::stoi( parameters_All[index]["size_y"] );
+
+            std::string nameP = parameters_All[index]["pName"];
+            //The index of our sf::text object
+            int text_List_Index = text_id_List[ nameP ];
+            if(mouseClickPosLeft->x > text_List[ text_List_Index ].getPosition().x && mouseClickPosLeft->x < text_List[ text_List_Index ].getPosition().x+size_X &&
+               mouseClickPosLeft->y > text_List[ text_List_Index ].getPosition().y && mouseClickPosLeft->y < text_List[ text_List_Index ].getPosition().y+size_Y
+               ){
+                std::cout << "( I WAS CLICKED! )" << std::endl;
+                *mouseClickPosLeft=sf::Vector2f(0,0);
+            }
+        }
+        return 0;
+    }
+    //CLICK SHAPE
+    int tag_Shape_Clickable(int index, float dt)
+    {
+        //Check if clickable
+        if(
+           parameters_All[index].find("clickable")!=parameters_All[index].end() &&
+           parameters_All[index].find("size_x")!=parameters_All[index].end() &&
+           parameters_All[index].find("size_y")!=parameters_All[index].end() &&
+           parameters_All[index].find("pName")!=parameters_All[index].end()
+           )
+        {
+            int size_X = std::stoi( parameters_All[index]["size_x"] );
+            int size_Y = std::stoi( parameters_All[index]["size_y"] );
+
+            std::string nameP = parameters_All[index]["pName"];
+            //The index of our sf::text object
+            int shape_List_Index = shape_id_List[ nameP ];
+            //Just see if there was a click update that was on the shape
+
+            if(mouseClickPosLeft->x > shape_List[ shape_List_Index ].getPosition().x && mouseClickPosLeft->x < shape_List[ shape_List_Index ].getPosition().x+size_X &&
+               mouseClickPosLeft->y > shape_List[ shape_List_Index ].getPosition().y && mouseClickPosLeft->y < shape_List[ shape_List_Index ].getPosition().y+size_Y
+               ){
+                std::cout << "( I WAS CLICKED! )" << std::endl;
+                *mouseClickPosLeft=sf::Vector2f(0,0);
+            }
         }
         return 0;
     }

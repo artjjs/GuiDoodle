@@ -24,27 +24,17 @@
 //Main is a SFML object machine
 int main()
 {
+    //CREATE WINDOW
     sf::RenderWindow window;
-    float screenx=1920.0f;
+    //  Set window details
+    float screenx=1920.0f;//variables
     float screeny=1080.0f;
     sf::Vector2f windowSize=sf::Vector2f(screenx,screeny);
     sf::Vector2f windowMiddle=sf::Vector2f(screenx/2.0f,screeny/2.0f);
-    std::string title="Jack App";//TITLE
-
-    //Window
-    window.create(sf::VideoMode({windowSize.x, windowSize.y}), title);
+    std::string title="Jack App";
+    window.create(sf::VideoMode({windowSize.x, windowSize.y}), title);//settings
     window.setFramerateLimit(60);
-
-    //Our packed up scene
-    sceneBalls sceneBall(1920,1080,0,0,std::string("gui/index.txt"));
-
-    //Windows window handle
-    sf::WindowHandle hWnd = window.getNativeHandle();
-
-    //Clock
-    sf::Clock clock;
-    clock.start();
-    float dt=0.0;
+    sf::WindowHandle hWnd = window.getNativeHandle();//window's window handle
 
     //EVENTS VARIABLES
     int pause=0;
@@ -55,10 +45,18 @@ int main()
     sf::Vector2f mouseClickPosLeft;
     sf::Vector2f mouseClickPosMiddle;
 
+    //Our packed up scene
+    sceneBalls sceneBall(1920,1080,0,0,std::string("gui/index.txt"),  &mouseCurrentPos, &mouseClickPosRight, &mouseClickPosLeft, &mouseClickPosMiddle);
+
+    //Clock
+    sf::Clock clock;
+    clock.start();
+    float dt=0.0;
+
     while (window.isOpen())
     {
         dt=clock.restart().asSeconds();
-        events(&window,&screenx,&screeny,&windowSize,&windowMiddle,&mouseWheelSpeed,&pause, &hWnd, sceneBall.guiFramePointer->window);
+        events(&window,&screenx,&screeny,&windowSize,&windowMiddle,&mouseWheelSpeed,&pause, &hWnd, sceneBall.guiFramePointer->window, &mouseCurrentPos, &mouseClickPosRight, &mouseClickPosLeft, &mouseClickPosMiddle);
         window.clear(sf::Color::Transparent);
         sceneBall.whileLoop(dt,&window);
         window.display();

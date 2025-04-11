@@ -6,9 +6,17 @@ public:
     sf::RenderTexture renderTexture;
     float posX, posY;
     JGUI *guiFramePointer;
+    sf::Vector2f* mouseCurrentPos;
+    sf::Vector2f* mouseClickPosRight;
+    sf::Vector2f* mouseClickPosLeft;
+    sf::Vector2f* mouseClickPosMiddle;
     //OPENING ACTIONS
-    sceneBalls(float x,float y,float posXin, float posYin, std::string path)
+    sceneBalls(float x,float y,float posXin, float posYin, std::string path, sf::Vector2f* mouseCurrentPosIn,sf::Vector2f* mouseClickPosRightIn,sf::Vector2f* mouseClickPosLeftIn,sf::Vector2f* mouseClickPosMiddleIn)
     {
+        mouseCurrentPos=mouseCurrentPosIn;
+        mouseClickPosRight=mouseClickPosRightIn;
+        mouseClickPosLeft=mouseClickPosLeftIn;
+        mouseClickPosMiddle=mouseClickPosMiddleIn;
         //Record the position of the render texture
         posX=posXin;
         posY=posYin;
@@ -33,7 +41,7 @@ public:
         //Load the static textures
         loadDir(&dirList, &texList, &texPathToName);
         //Create a instance of my SUDO HTML GUI class
-        JGUI guiFrame(&renderTexture,&sceneData.fonts.at(0));
+        JGUI guiFrame(&renderTexture,&sceneData.fonts.at(0),mouseCurrentPos,mouseClickPosRight,mouseClickPosLeft,mouseClickPosMiddle);
         guiFramePointer = &guiFrame;
         guiFrame.load(path);
         guiFrame.execute_Tags();
@@ -44,6 +52,7 @@ public:
     {
         //Do rotations translations scaling and color animations
         sceneData.guis.at(0).execute_Tags_Animations(dt);
+        sceneData.guis.at(0).execute_Tags_Clickable(dt);
     }
     void whileLoop(float dt, sf::RenderWindow* window)
     {

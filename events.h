@@ -1,5 +1,5 @@
 
-void events(sf::RenderWindow* window,float* screenx, float* screeny,sf::Vector2f* windowSize,sf::Vector2f* windowMiddle,float* mouseWheelSpeed,int* pause, sf::WindowHandle* hWnd, sf::RenderTexture* rwindow)
+void events(sf::RenderWindow* window,float* screenx, float* screeny,sf::Vector2f* windowSize,sf::Vector2f* windowMiddle,float* mouseWheelSpeed,int* pause, sf::WindowHandle* hWnd, sf::RenderTexture* rwindow,sf::Vector2f* mouseCurrentPos,sf::Vector2f* mouseClickPosRight,sf::Vector2f* mouseClickPosLeft,sf::Vector2f* mouseClickPosMiddle)
 {
 
     while (const std::optional event = window->pollEvent())
@@ -43,17 +43,17 @@ void events(sf::RenderWindow* window,float* screenx, float* screeny,sf::Vector2f
             if (mouseButtonPressed->button == sf::Mouse::Button::Right)
             {
                 std::cout << "the right button was pressed" << std::endl;
-                sf::Vector2f mouseClickPosRight = sf::Vector2f(mouseButtonPressed->position.x, mouseButtonPressed->position.y);
+                *mouseClickPosRight = sf::Vector2f(mouseButtonPressed->position.x, mouseButtonPressed->position.y);
             }
             if (mouseButtonPressed->button == sf::Mouse::Button::Left)
             {
                 std::cout << "the left button was pressed" << std::endl;
-                sf::Vector2f mouseClickPosLeft = sf::Vector2f(mouseButtonPressed->position.x, mouseButtonPressed->position.y);
+                *mouseClickPosLeft = sf::Vector2f(mouseButtonPressed->position.x, mouseButtonPressed->position.y);
             }
             if (mouseButtonPressed->button == sf::Mouse::Button::Middle)
             {
                 std::cout << "the middle button was pressed" << std::endl;
-                sf::Vector2f mouseClickPosMiddle = sf::Vector2f(mouseButtonPressed->position.x, mouseButtonPressed->position.y);
+                *mouseClickPosMiddle = sf::Vector2f(mouseButtonPressed->position.x, mouseButtonPressed->position.y);
             }
         }
         else if (event->is<sf::Event::FocusLost>())
