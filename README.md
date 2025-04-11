@@ -1,6 +1,7 @@
 # :thumbsup: Gui Doodle :thumbsup:
 
 ## Simple overview :
+### This project is currently in pre alpha stage :
 1. Packed basic SFML window into a class
    - Scene Object
       - Chooses how the scene is drawn exactly
