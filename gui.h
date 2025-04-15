@@ -348,9 +348,36 @@ public:
                ){
                 std::cout << "( I WAS CLICKED! )" << std::endl;
                 *mouseClickPosLeft=sf::Vector2f(0,0);
-                parameters_All[index].insert(std::make_pair("hover", "10"));
-                parameters_All[index].insert(std::make_pair("animation_size_x", "10"));
-                parameters_All[index].insert(std::make_pair("animation_size_y", "10"));
+
+                //make sure to pass what the animation needs in the tag
+                if (parameters_All[index]["clickable"] == "hover")
+                {
+                    parameters_All[index].insert(std::make_pair("hover", "10"));
+                }
+                if (parameters_All[index]["clickable"] == "wiggle")
+                {
+                    parameters_All[index].insert(std::make_pair("wiggle", "10"));
+                }
+                if (parameters_All[index]["clickable"] == "cos")
+                {
+                    parameters_All[index].insert(std::make_pair("cos", "10"));
+                }
+                if (parameters_All[index]["clickable"] == "bpulse")
+                {
+                    parameters_All[index].insert(std::make_pair("bpulse", "10"));
+                }
+                if (parameters_All[index]["clickable"] == "cpulse")
+                {
+                    parameters_All[index].insert(std::make_pair("cpulse", "10"));
+                }
+                if (parameters_All[index]["clickable"] == "rotate")
+                {
+                    parameters_All[index].insert(std::make_pair("rotate", "1"));
+                }
+                if (parameters_All[index]["clickable"] == "pulse")
+                {
+                    parameters_All[index].insert(std::make_pair("pulse", "10"));
+                }
 
                 std::cout << "List of parameters." << std::endl;
                 for(int i=0; i < parameters_All[index].size(); i++)
@@ -893,7 +920,7 @@ public:
                 shape_List[ shape_List_Index ].setOrigin(Position);
 
                 //apply rotation
-                shape_List[ shape_List_Index ].setRotation(sf::degrees(shape_List[ shape_List_Index ].getRotation().asDegrees()+shape_Velocity_List[ nameP ].x));
+                shape_List[ shape_List_Index ].setRotation(sf::degrees(shape_List[ shape_List_Index ].getRotation().asDegrees()+std::stoi( parameters_All[index]["animation_size_x"])));
                 shape_List[ shape_List_Index ].setPosition(sf::Vector2f(shape_object_start.x+std::stoi(parameters_All[index]["size_x"]) / 2.0,shape_object_start.y+std::stoi(parameters_All[index]["size_y"]) / 2.0));
             }
             catch (const std::invalid_argument& e)
@@ -1944,7 +1971,7 @@ public:
             shape_origin_id_List.insert( std::make_pair(a , rectangle.getPosition()));
 
             //Store a velocity to track on this tag
-            shape_Velocity_List.insert( std::make_pair(a , sf::Vector2f( 0.0, std::stoi( parameters_All[index]["clickable"]) ) ));
+            shape_Velocity_List.insert( std::make_pair(a , sf::Vector2f( 0.0, 10.0 )));
 
             //Just count the list size ATM
             int in=0;
