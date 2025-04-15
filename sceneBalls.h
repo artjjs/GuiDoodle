@@ -51,8 +51,8 @@ public:
     void update(float dt)
     {
         //Do rotations translations scaling and color animations
-        sceneData.guis.at(0).execute_Tags_Animations(dt);
         sceneData.guis.at(0).execute_Tags_Clickable(dt);
+        sceneData.guis.at(0).execute_Tags_Animations(dt);
     }
     void whileLoop(float dt, sf::RenderWindow* window)
     {
@@ -61,6 +61,7 @@ public:
 
         //Update all the internal scene dynamics
         update(dt);
+
         if(sceneData.guis.at(0).shape_List.size()!=0)
         {
             //Since JGUI stores all it's own members we draw them out here

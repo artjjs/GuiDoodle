@@ -348,6 +348,20 @@ public:
                ){
                 std::cout << "( I WAS CLICKED! )" << std::endl;
                 *mouseClickPosLeft=sf::Vector2f(0,0);
+                parameters_All[index].insert(std::make_pair("hover", "10"));
+                parameters_All[index].insert(std::make_pair("animation_size_x", "10"));
+                parameters_All[index].insert(std::make_pair("animation_size_y", "10"));
+
+                std::cout << "List of parameters." << std::endl;
+                for(int i=0; i < parameters_All[index].size(); i++)
+                {
+                    //We do a weird trick of moving the list items over and over so each one is at first to be looked at
+                    auto it = parameters_All[index].begin();
+                    std::advance(it, i);
+                    std::cout << "( " << it->first << " )" << "( " << parameters_All[index].at(it->first) << " )" << std::endl;
+
+                }
+
             }
         }
         return 0;
@@ -958,7 +972,6 @@ public:
         {
             int speed;
             try {
-                parameters_All[index]["hover"];
                 //c++ parameter index to text_List index
                 std::string nameP = parameters_All[index]["pName"];
                 //Velocity for this tag is at nameP in text_Velocity_List
@@ -1864,6 +1877,10 @@ public:
         //IF HAS cpulse TAG
         if(
            parameters_All[index].find("pName")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_color_r")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_color_g")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_color_b")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_color_a")!=parameters_All[index].end() &&
            parameters_All[index].find("cpulse")!=parameters_All[index].end()
            )
         {
@@ -1915,6 +1932,30 @@ public:
             //Record the position we pushed this item into
             shape_id_List.insert( std::make_pair(a , in));
         }
+
+        //IF HAS CLICKABLE
+        if(
+           parameters_All[index].find("pName")!=parameters_All[index].end() &&
+           parameters_All[index].find("clickable")!=parameters_All[index].end()
+           )
+        {
+            //Store a copy of the starting position
+            std::string a=parameters_All[index]["pName"];
+            shape_origin_id_List.insert( std::make_pair(a , rectangle.getPosition()));
+
+            //Store a velocity to track on this tag
+            shape_Velocity_List.insert( std::make_pair(a , sf::Vector2f( 0.0, std::stoi( parameters_All[index]["clickable"]) ) ));
+
+            //Just count the list size ATM
+            int in=0;
+            for(int j=0;j<shape_List.size();j++){
+                in++;
+            }
+
+            //Record the position we pushed this item into
+            shape_id_List.insert( std::make_pair(a , in));
+        }
+
         shape_List.push_back(rectangle);
         return 0;
     }
