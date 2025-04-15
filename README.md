@@ -25,7 +25,7 @@
       - Create Gui class to execute the given sudo html tags ✔️
       - Have animation tags border pulse, hover, color pulse, rotate, wiggle, size pulse ✔️
       - Have any element able to respond to clicks ✔️
-      - Have temp animation for click responces
+      - Have temp animation for click responces ✔️
       - Have Gui class take pointer to another Gui classes rendertexture as a texture to use on shapes "Entire layout as shape's texture"
       - Create scene swapping as click responce
       - Fix freeze on resize issue
