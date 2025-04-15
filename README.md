@@ -5,7 +5,7 @@
 1. Packed basic SFML window into a class
    - Scene Object
       - Chooses how the scene is drawn exactly
-      - Creates a instance of the GUI class
+      - Creates a instance / instances of the GUI class
 2. Seperated event handling
    - Moved the keyboard handler and window events into there own file
 3. Pack layout description into gui class
