@@ -49,8 +49,8 @@
 
 ## SUDO HTML :
 ## Allow any set of parameters defaulting to generic tag object for each undefined parameter :
-   This means you can randomly leave out tags or add usless ones with out issue.
-   Even when a multi parameter system is missing a tag it just skips.
+#  This means you can randomly leave out tags or add usless ones with out issue.
+# Even when a multi parameter system is missing a tag it just skips.
 ![ScreenShot2](https://github.com/user-attachments/assets/400dd095-cef5-4be4-9b02-544e7ab74a9e)
 
 ## A few instances of my scene class with diffrent index.txt files positioned at each 4th of the screen :
