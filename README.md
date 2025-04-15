@@ -13,6 +13,7 @@
 2. Seperated event handling ✔️
    - Moved the keyboard handler and window events into there own file ✔️
    - Have all keyboard keys report to console when even is thrown ✔️
+   - Have window unfocus cause window to go semi transparent ✔️
 3. Pack layout description into gui class ✔️
       - Read .txt SUDO HTML for list of tags ✔️
       - Read tag for parameter and value pairs ✔️
