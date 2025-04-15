@@ -24,8 +24,7 @@
       -    size✔️
       -    misc properties✔️
       -    ID and parent ID ✔️
-
-   - TO DO :
+      -    Have alignment to parent ✔️
       - Have layout file that uses sudo html ✔️
       - Read all images in images folder into memory for quick use ✔️
       - Package scene into it's own class ✔️
@@ -34,11 +33,15 @@
       - Have any element able to respond to clicks ✔️
       - Have clickable cause start animation for shape ✔️
       - Have any animation be selectable as the click responce ✔️
+        
+   - TO DO :
       - Have life time for animation triggered by click
       - Have Gui class take pointer to another Gui classes rendertexture as a texture to use on shapes "Entire layout as shape's texture"
       - Create scroll boxes and drop down menus
       - Create scene swapping as click responce
+      - Have size by % of screen or % of parent
       - Have a configurable map for what keys do what "Key mapping"
+      - Refactor code
       - Fix freeze on resize issue
       - Create cmake build system
       - Make proof of use clone of a popular website's layout
