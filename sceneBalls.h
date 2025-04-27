@@ -72,10 +72,6 @@ public:
                 renderTexture.draw(sceneData.guis.at(0).shape_List[i]);
             }
         }
-        else
-        {
-
-        }
         if(sceneData.guis.at(0).sprite_List.size()!=0)
         {
             for(unsigned int i=0;i<sceneData.guis.at(0).sprite_List.size();i++)
@@ -85,55 +81,11 @@ public:
                 renderTexture.draw(sceneData.guis.at(0).sprite_List[i]);
             }
         }
-        else
-        {
-
-        }
         if(sceneData.guis.at(0).text_List.size()!=0)
         {
             for(unsigned int i=0;i<sceneData.guis.at(0).text_List.size();i++)
             {
                 renderTexture.draw(sceneData.guis.at(0).text_List[i]);
-            }
-        }
-        else
-        {
-
-        }
-        //SPRITES
-        if (sceneData.sprites.size()!=0)
-        {
-            for(int i=0;i < sceneData.sprites.size();i++)
-            {
-                //Queue up draws
-                renderTexture.draw(sceneData.sprites.at(i));
-            }
-        }
-        //RECT SHAPES
-        if (sceneData.rectangleShapes.size()!=0)
-        {
-            for(int i=0;i < sceneData.rectangleShapes.size();i++)
-            {
-                //Queue up draws
-                renderTexture.draw(sceneData.rectangleShapes.at(i));
-            }
-        }
-        //CIRCLE SHAPES
-        if (sceneData.circleShapes.size()!=0)
-        {
-            for(int i=0;i < sceneData.circleShapes.size();i++)
-            {
-                //Queue up draws
-                renderTexture.draw(sceneData.circleShapes.at(i));
-            }
-        }
-        //TEXTS
-        if (sceneData.texts.size()!=0)
-        {
-            for(int i=0;i < sceneData.texts.size();i++)
-            {
-                //Queue up draws
-                renderTexture.draw(sceneData.texts.at(i));
             }
         }
 

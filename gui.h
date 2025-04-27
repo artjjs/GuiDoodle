@@ -17,6 +17,9 @@ public:
     std::vector<sf::RectangleShape> shape_List;
     std::vector<sf::Texture> texture_shapes_List;
 
+    std::vector<float> animation_timer_List;
+    std::map<std::string, sf::Clock> animation_clock_Map;
+
     //Temp vars
     std::string tag;
     std::string contents;
@@ -353,6 +356,8 @@ public:
                 if (parameters_All[index]["clickable"] == "hover")
                 {
                     parameters_All[index].insert(std::make_pair("hover", "10"));
+                    //We use the map created at Shape Tag function's clickable tag action to summon a clock to track this specific animation
+                    animation_clock_Map.at(parameters_All[index]["pName"]).start();
                 }
                 if (parameters_All[index]["clickable"] == "wiggle")
                 {
@@ -364,7 +369,7 @@ public:
                 }
                 if (parameters_All[index]["clickable"] == "bpulse")
                 {
-                    parameters_All[index].insert(std::make_pair("bpulse", "10"));
+                    parameters_All[index].insert(std::make_pair("bpulse", "-10"));
                 }
                 if (parameters_All[index]["clickable"] == "cpulse")
                 {
@@ -1963,9 +1968,16 @@ public:
         //IF HAS CLICKABLE
         if(
            parameters_All[index].find("pName")!=parameters_All[index].end() &&
+           parameters_All[index].find("animation_timer")!=parameters_All[index].end() &&
            parameters_All[index].find("clickable")!=parameters_All[index].end()
            )
         {
+            //animation timer list
+            animation_timer_List.push_back( float(std::stoi( parameters_All[index]["animaiton_timer"] )) );
+
+            sf::Clock animation_clock;
+            animation_clock_Map.insert(std::make_pair(parameters_All[index]["pName"], animation_clock));
+
             //Store a copy of the starting position
             std::string a=parameters_All[index]["pName"];
             shape_origin_id_List.insert( std::make_pair(a , rectangle.getPosition()));
